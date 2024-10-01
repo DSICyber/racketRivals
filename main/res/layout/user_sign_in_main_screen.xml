@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- RelativeLayout with tennis green background -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@color/tennis_green">
+
+        <!-- Log Out Button -->
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:layout_alignParentStart="true"/>
+
+        <!-- Profile Picture -->
+        <ImageView
+            android:id="@+id/profileImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+      />
+
+        <!-- Username TextView -->
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/profileImageView"
+            android:text="Username"
+            android:textColor="@color/white" /> <!-- Replace with dynamic username -->
+
+        <!-- TextView for "ELO:" -->
+        <TextView
+            android:id="@+id/eloLabelTextView"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/playerEloTextView"
+            android:text="ELO:"
+            android:textColor="@color/white" />
+
+        <!-- Player ELO -->
+        <TextView
+            android:id="@+id/playerEloTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/usernameTextView"
+            android:text=""
+            android:textColor="@color/white" /> <!-- Replace with dynamic ELO value -->
+    </RelativeLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="17"
+        android:visibility="visible"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
+        tools:visibility="visible" />
+
+    <!-- Existing BottomNavigationView -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        app:labelVisibilityMode="labeled"
+        android:background="@color/tennis_green"
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:menu="@menu/bottom_nav"
+        android:elevation="4dp"/>
+
+</LinearLayout>

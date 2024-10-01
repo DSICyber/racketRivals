@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".QuestionnaireActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back" />
+        <!-- Experience Level Question -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Experience Level:"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/experienceLevelRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/experienceLevelRadioGroupZero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beginner (1000)"
+                android:tag="1000"/>
+            <RadioButton
+                android:id="@+id/experienceLevelRadioGroupOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intermediate (1200)"
+                android:tag="1200"/>
+            <RadioButton
+                android:id="@+id/experienceLevelRadioGroupTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Advanced (1400)"
+                android:tag="1400"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How long have you been playing tennis?"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/durationRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/durationRadioGroupZero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Less than a year (-50)"
+                android:tag="-50"/>
+            <RadioButton
+                android:id="@+id/durationRadioGroupOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1-3 years (0)"
+                android:tag="0"/>
+            <RadioButton
+                android:id="@+id/durationRadioGroupTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3-5 years (+50)"
+                android:tag="50"/>
+            <RadioButton
+                android:id="@+id/durationRadioGroupThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More than 5 years (+100)"
+                android:tag="100"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How often do you play tennis?"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/playFrequencyRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/playFrequencyRadioGroupZero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Less than once a month (-50)"
+                android:tag="-50"/>
+            <RadioButton
+                android:id="@+id/playFrequencyRadioGroupOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More than once a month (0)"
+                android:tag="0"/>
+            <RadioButton
+                android:id="@+id/playFrequencyRadioGroupTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="More than once a week (+50)"
+                android:tag="50"/>
+            <RadioButton
+                android:id="@+id/playFrequencyRadioGroupThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Almost Daily (+100)"
+                android:tag="100"/>
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Have you taken any tennis lessons?"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/tennisLessonsRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/tennisLessonsRadioGroupZero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No (0)"
+                android:tag="0"/>
+            <RadioButton
+                android:id="@+id/tennisLessonsRadioGroupOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes (+50)"
+                android:tag="50"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Have you participated in any tennis competitions?"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/tennisCompetitionsRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/tennisCompetitionsRadioGroupZero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No (0)"
+                android:tag="0"/>
+            <RadioButton
+                android:id="@+id/tennisCompetitionsRadioGroupOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes, at a beginner level (+50)"
+                android:tag="50"/>
+            <RadioButton
+                android:id="@+id/tennisCompetitionsRadioGroupTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes, at an intermediate level (+100)"
+                android:tag="100"/>
+            <RadioButton
+                android:id="@+id/tennisCompetitionsRadioGroupThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes, at an advanced level (+150)"
+                android:tag="150"/>
+        </RadioGroup>
+
+
+        <!-- Create Account Button (Bottom) -->
+        <Button
+            android:id="@+id/createAccountButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Account Creation Failed Message (Initially set to gone) -->
+        <TextView
+            android:id="@+id/accountCreationFailedMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Creation Failed"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+        <!-- Account Creation Successful Message (Initially set to gone) -->
+
+        <TextView
+            android:id="@+id/accountCreationSuccessMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#82BC41"
+            android:gravity="center"
+            android:text="Account Creation Successful \n  You will be Taken Back to the sign in activity"
+            android:textColor="#455A64"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:padding="16dp" />
+    </RelativeLayout>
+</ScrollView>

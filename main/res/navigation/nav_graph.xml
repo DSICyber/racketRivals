@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_home_screen">
+
+    <fragment
+        android:id="@+id/fragment_home_screen"
+        android:name="com.example.racketrivals.HomeScreenFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home_screen">
+        <action
+            android:id="@+id/createMatch"
+            app:destination="@id/fragment_match_creation" />
+        <action
+            android:id="@+id/match_requests"
+            app:destination="@id/fragment_requests" />
+        <action
+            android:id="@+id/leaderboard"
+            app:destination="@id/fragment_leaderboard" />
+        <action
+            android:id="@+id/match_history"
+            app:destination="@id/fragment_match_history" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_match_creation"
+        android:name="com.example.racketrivals.matchCreationFragment"
+        android:label="@string/create_match"
+        tools:layout="@layout/fragment_match_creation" >
+        <action
+            android:id="@+id/matchCourtId"
+            app:destination="@id/fragment_find_court_for_match" />
+        <action
+            android:id="@+id/home"
+            app:destination="@id/fragment_home_screen" />
+        <action
+            android:id="@+id/match_requests"
+            app:destination="@id/fragment_requests" />
+        <action
+            android:id="@+id/leaderboard"
+            app:destination="@id/fragment_leaderboard" />
+        <action
+            android:id="@+id/match_history"
+            app:destination="@id/fragment_match_history" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_requests"
+        android:name="com.example.racketrivals.Requests"
+        android:label="@string/match_requests"
+        tools:layout="@layout/fragment_requests" >
+        <action
+            android:id="@+id/home"
+            app:destination="@id/fragment_home_screen" />
+        <action
+            android:id="@+id/createMatch"
+            app:destination="@id/fragment_match_creation" />
+        <action
+            android:id="@+id/leaderboard"
+            app:destination="@id/fragment_leaderboard" />
+        <action
+            android:id="@+id/match_history"
+            app:destination="@id/fragment_match_history" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_leaderboard"
+        android:name="com.example.racketrivals.leaderboard"
+        android:label="@string/leader_board"
+        tools:layout="@layout/fragment_leaderboard" >
+        <action
+            android:id="@+id/home"
+            app:destination="@id/fragment_home_screen" />
+        <action
+            android:id="@+id/createMatch"
+            app:destination="@id/fragment_match_creation" />
+        <action
+            android:id="@+id/match_requests"
+            app:destination="@id/fragment_requests" />
+        <action
+            android:id="@+id/match_history"
+            app:destination="@id/fragment_match_history" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_match_history"
+        android:name="com.example.racketrivals.match_history"
+        android:label="@string/match_history"
+        tools:layout="@layout/fragment_match_history" >
+        <action
+            android:id="@+id/home"
+            app:destination="@id/fragment_home_screen" />
+        <action
+            android:id="@+id/createMatch"
+            app:destination="@id/fragment_match_creation" />
+        <action
+            android:id="@+id/match_requests"
+            app:destination="@id/fragment_requests" />
+        <action
+            android:id="@+id/leaderboard"
+            app:destination="@id/fragment_leaderboard" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/fragment_court_submission"
+        android:name="com.example.racketrivals.CourtSubmissionFragment"
+        android:label="Court Submission"
+        tools:layout="@layout/fragment_court_submission" >
+        <action
+            android:id="@+id/home"
+            app:destination="@id/fragment_home_screen" />
+        <action
+            android:id="@+id/createMatch"
+            app:destination="@id/fragment_match_creation" />
+        <action
+            android:id="@+id/match_requests"
+            app:destination="@id/fragment_requests" />
+        <action
+            android:id="@+id/leaderboard"
+            app:destination="@id/fragment_leaderboard" />
+        <action
+            android:id="@+id/match_history"
+            app:destination="@id/fragment_match_history" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_court_voting"
+        android:name="com.example.racketrivals.CourtVotingFragment"
+        android:label="Vote on Courts"
+        tools:layout="@layout/fragment_court_voting" >
+    <action
+        android:id="@+id/home"
+        app:destination="@id/fragment_home_screen" />
+    <action
+        android:id="@+id/createMatch"
+        app:destination="@id/fragment_match_creation" />
+    <action
+        android:id="@+id/match_requests"
+        app:destination="@id/fragment_requests" />
+    <action
+        android:id="@+id/leaderboard"
+        app:destination="@id/fragment_leaderboard" />
+    <action
+        android:id="@+id/match_history"
+        app:destination="@id/fragment_match_history" />
+</fragment>
+    <fragment
+        android:id="@+id/fragment_find_court_for_match"
+        android:name="com.example.racketrivals.FindCourtForMatchFragment"
+        android:label="Find Court"
+        tools:layout="@layout/fragment_find_court_for_match" />
+</navigation>

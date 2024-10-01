@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/createMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_sports_tennis_24"
+        android:title="@string/create_match"
+        android:visible="true"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/match_requests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_mail_24"
+        android:visible="true"
+        app:showAsAction="withText"
+        android:title="@string/match_requests"/>
+    <item
+        android:id="@+id/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/home"
+        android:visible="true"
+        app:showAsAction="withText"
+        android:title="@string/home"/>
+    <item
+        android:id="@+id/leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/baseline_query_stats_24"
+        android:visible="true"
+        app:showAsAction="withText"
+        android:title="@string/leader_board"/>
+    <item
+        android:id="@+id/match_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/list"
+        android:title="@string/match_history"
+        android:visible="true"
+        app:showAsAction="withText" />
+</menu>
